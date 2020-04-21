@@ -1,0 +1,18 @@
+# 3주차
+
+크기가 서로 다른 두 원을 마우스의 이동에 따라 교차
+
+void setup(){
+	size(640,360);
+	noStroke();
+	rectMode(CENTER);
+}
+void draw(){
+	background(0,0,0);
+	fill(255,255,255);
+	ellipse(mouseX, height/2, mouseY/2+10, mouseY/2+10 );
+	fill(255,255,255);
+	int inverseX = width-mouseX;
+	int inverseY = height-mouseY;
+	ellipse(inverseX, height/2, (inverseY/2)+10, (inverseY/2)+10);
+}
